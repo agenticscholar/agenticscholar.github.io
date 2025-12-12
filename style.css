@@ -1,0 +1,283 @@
+/* style.css */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+  --white: #ffffff;
+  --max-width: 900px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+header {
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;          /* Enables side-by-side layout */
+  align-items: center;    /* Vertically centers the logo with text */
+  gap: 10px;             /* Adds space between logo and text */
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 32px;           /* Sets a fixed height to fit the navbar */
+  width: auto;            /* Maintains aspect ratio */
+}
+
+/* .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+} */
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem 4rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+/* Cards / Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--accent-color);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* Media Frames (Video/Slides/Poster) */
+.media-container {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+iframe, object {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .nav-links { gap: 10px; font-size: 0.9rem; }
+}
+
+
+/* Generic grid for all multi-image steps */
+.step-grid {
+  display: grid;
+  /* Auto-fit 1–3 columns depending on available width */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  justify-items: center;   /* center cards in their grid cells */
+}
+
+/* Full-width card (e.g., Step 4 alone on its own row) */
+.step-card-full {
+  grid-column: 1 / -1;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card img {
+  width: 100%;
+  max-width: 420px;           /* control size */
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;  /* light gray border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.step-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;             /* gray-ish */
+  font-weight: 500;
+  text-align: center;
+}
+
+.step-caption-left {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;             /* gray-ish */
+  font-weight: 500;
+}
+
+/* Single big screenshot block */
+.step-single {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-left {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.step-single img {
+  width: 100%;        /* occupy full content width */
+  max-width: 900px;   /* cap so it doesn’t get TOO huge on big screens */
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  padding: 0.35rem 0;
+  min-width: 220px;
+  z-index: 20;
+}
+
+/* Show on hover */
+.nav-item.has-dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item.has-dropdown {
+  position: relative;
+}
+.nav-item .dropdown-toggle {
+  text-decoration: none;
+}
+
+/* Items inside dropdown */
+.dropdown-menu a {
+  padding: 0.45rem 0.9rem;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background: #eef2ff;           /* light highlight */
+  color: var(--accent-color);
+}

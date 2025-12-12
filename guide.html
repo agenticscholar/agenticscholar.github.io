@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgenticScholar | User Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+      <img src="logo_agentic.png" alt="AgenticScholar Logo" class="logo-img">
+      AgenticScholar
+    </a>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="video.html">Video</a>
+        <a href="slides.html">Slides</a>
+        <a href="poster.html">Poster</a>
+        <a href="guide.html" class="active">User Guide</a>
+        <!-- <a href="example.html">Examples</a> -->
+        <div class="nav-item has-dropdown">
+            <a class="dropdown-toggle">Examples ▾</a>
+            <div class="dropdown-menu">
+              <a href="vector_search_example.html">Vector search</a>
+              <a href="learned_qo_example.html">Learned query optimization</a>
+              <a href="llm_tabular_example.html">LLMs for tabular data analysis</a>
+            </div>
+          </div>
+        <a href="http://uqdatasystem-ab9d83bf.uqcloud.net/" target="_blank" style="color: var(--accent-color);">Try System ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>AgenticScholar User Guide</h1>
+    </section>
+
+    <!-- 1. Introduction -->
+    <section id="introduction">
+      <h2>1. Introduction</h2>
+      <p>
+        <strong>AgenticScholar</strong> is an intelligent academic data management system designed to assist researchers in
+        organizing, analyzing, and reasoning over large-scale scholarly corpora. Beyond traditional reference management,
+        AgenticScholar leverages agent-based AI to support open-ended and complex scholarly queries, such as research trend
+        analysis and research idea exploration.
+      </p>
+    </section>
+
+    <!-- 2. Getting Started -->
+    <section id="getting-started">
+      <h2>2. Getting Started</h2>
+
+      <!-- 2.1 Create Your Account -->
+      <div class="section-block">
+        <div class="section-text">
+          <h3>2.1 Create Your Account</h3>
+          <p>To begin using AgenticScholar, first create a user account:</p>
+          <ol>
+            <li>On the login page, click the <strong>Sign up</strong> button.</li>
+            <li>Complete the registration form:
+              <ul>
+                <li><strong>Username</strong>: Must consist of lowercase letters only (e.g., <code>adctest</code>). Special characters and uppercase letters are not allowed.</li>
+                <li><strong>Name</strong>: Enter your full name.</li>
+                <li><strong>Email</strong>: Enter a valid email address.</li>
+                <li><strong>Password</strong>: Create a secure password.</li>
+              </ul>
+            </li>
+            <li>Click <strong>Sign up</strong> to create your account and log in.</li>
+          </ol>
+        </div>
+
+        <div class="step-grid">
+          <div class="step-card">
+            <img
+              src="images/1_Sec_21_step1.png"
+              alt="Login page highlighting the Sign up link"
+            />
+            <p class="step-caption">Click <strong>Sign up</strong>.</p>
+          </div>
+
+          <div class="step-card">
+            <img
+              src="images/2_Sec_21_step2.png"
+              alt="Registration form with name, email, and password fields"
+            />
+            <p class="step-caption">Fill registration form.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.2 Dashboard Overview -->
+      <div class="section-block">
+        <div class="section-text">
+          <h3>2.2 Familiarize Yourself with the Dashboard</h3>
+          <p>
+            After logging in, the main interface is divided into three primary areas:
+          </p>
+          <ul>
+            <li>
+              <strong>Left Sidebar</strong><br>
+              This is your control panel for:
+              <ul>
+                <li>Managing Knowledge Bases</li>
+                <li>Viewing paper lists</li>
+                <li>Browsing taxonomy trees (e.g., <em>Problems</em> and <em>Methods</em>)</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Center Canvas</strong><br>
+              This is your main working area where you:
+              <ul>
+                <li>Enter queries</li>
+                <li>View system responses, including charts, tables, and textual answers</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Right Panel</strong><br>
+              This area displays:
+              <ul>
+                <li>Your chat history</li>
+                <li>The <em>Execution Trace</em>, which shows how the system processes your query step-by-step</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="step-single">
+            <img
+              src="images/3_Sec22_step1.png"
+              alt="AgenticScholar dashboard with left sidebar, center canvas, and right panel"
+            />
+            <p class="step-caption">Dashboard overview.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Create a Knowledge Base -->
+    <section id="knowledge-base">
+      <h2>3. Create a Knowledge Base</h2>
+      <p>
+        Before analyzing papers, you must create at least one <strong>Knowledge Base</strong> to store them:
+      </p>
+      <ol>
+        <li>In the <strong>Left Sidebar</strong>, locate the <em>Current Knowledge Base</em> section.</li>
+        <li>Click the <strong>+</strong> (plus) button.</li>
+        <li>Enter a name for the new Knowledge Base (e.g., <code>vector_search</code>).</li>
+        <li>Confirm to create the Knowledge Base.</li>
+      </ol>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <img
+            src="images/4_Sec3_step1.png"
+            alt="Knowledge Base panel highlighting the plus button"
+          />
+          <p class="step-caption">Click the <strong>+</strong> button.</p>
+        </div>
+
+        <div class="step-card">
+          <img
+            src="images/5_Sec3_step2.png"
+            alt="Dialog to enter the name of a new knowledge base"
+          />
+          <p class="step-caption">Enter a Knowledge Base name.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Upload Research Papers -->
+    <section id="upload-papers">
+      <h2>4. Upload Research Papers</h2>
+      <p>
+        Once a Knowledge Base has been created, you can populate it with research papers:
+      </p>
+      <ol>
+        <li>In the <strong>Left Sidebar</strong>, select your target Knowledge Base.</li>
+        <li>Click the <strong>Upload Paper</strong> button at the bottom.</li>
+        <li>Select one or more PDF files from your computer to upload.</li>
+        <li>Wait for the system to process the uploaded papers.</li>
+      </ol>
+
+      <div class="step-single">
+
+          <img
+            src="images/6_Sec4_step1.png"
+            alt="Upload Paper button and file selection dialog"
+          />
+          <p class="step-caption">Upload papers.</p>
+      </div>
+    </section>
+
+    <!-- 5. Build an Academic Taxonomy -->
+    <section id="taxonomy">
+      <h2>5. Build an Academic Taxonomy</h2>
+      <p>
+        AgenticScholar can automatically organize your uploaded papers into a structured taxonomy:
+      </p>
+      <ol>
+        <li>In the <strong>Left Sidebar</strong>, click the <strong>Create Taxonomy</strong> button (bottom-left corner).</li>
+        <li>After the taxonomy construction is complete, select <strong>Problems</strong> or <strong>Methods</strong> to view the corresponding taxonomy tree.</li>
+        <li>Click any node in the taxonomy tree to read its description.</li>
+      </ol>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <img
+            src="images/7_Sec5_step1.png"
+            alt="Create Taxonomy button in the left sidebar"
+          />
+          <p class="step-caption">
+            Click <strong>Create Taxonomy</strong>.
+          </p>
+        </div>
+      
+        <div class="step-card">
+          <img
+            src="images/8_Sec5_step2.png"
+            alt="Problems taxonomy tree expanded"
+          />
+          <p class="step-caption">
+            View the generated taxonomy tree.
+          </p>
+        </div>
+      
+        <div class="step-card">
+          <img
+            src="images/9_Sec5_step3.png"
+            alt="Methods taxonomy tree expanded"
+          />
+          <p class="step-caption">
+            Explore the <strong>Methods</strong> taxonomy tree.
+          </p>
+        </div>
+      
+      </div>   
+      
+      <div class="step-single">
+        <img
+        src="images/10_Sec5_step4.png"
+        alt="Topic detail pane showing node description"
+        />
+        <p class="step-caption">
+            Click a node to read its detailed description.
+        </p>
+    </div>
+    </section>
+
+    <!-- 6. Ask Scholarly Queries -->
+    <section id="queries">
+      <h2>6. Ask Scholarly Queries</h2>
+      <p>
+        AgenticScholar supports multiple modes of scholarly exploration, from single-paper analysis
+        to topic-level reasoning over sets of papers.
+      </p>
+
+      <!-- 6.1 Single Paper Exploration -->
+      <section id="single-paper">
+        <h3>6.1 Single Paper Exploration</h3>
+        <p>Use this mode to analyze or query a single paper:</p>
+        <ol>
+          <li>Select the target paper from the paper list in the Left Sidebar.</li>
+          <li>Then either:
+            <ul>
+              <li>Click the <strong>Single Paper Exploration</strong> button under the suggested queries, or</li>
+              <li>Directly type a query into the chat box, e.g., <em>"Show me the experiment settings."</em></li>
+            </ul>
+          </li>
+          <li>The system returns an answer based on the selected paper.</li>
+        </ol>
+
+        <div class="step-single">
+       
+            <img
+              src="images/11_Sec61_step1.png"
+              alt="Single paper exploration view with selected paper and query"
+            />
+            <p class="step-caption">Single paper exploration.</p>
+
+        </div>
+      </section>
+
+      <!-- 6.2 Set of Papers Exploration -->
+      <section id="set-of-papers">
+        <h3>6.2 Set of Papers Exploration</h3>
+        <p>Use this mode to query a set of papers:</p>
+        <ol>
+          <li>Select all relevant papers you wish to analyze.</li>
+          <li>Then either:
+            <ul>
+              <li>Click the <strong>Set of Papers Exploration</strong> option from the suggested queries, or</li>
+              <li>Type a query into the chat box, e.g., <em>"Summarize the methods across these papers."</em></li>
+            </ul>
+          </li>
+          <li>The system synthesizes information across the selected papers to produce an answer.</li>
+        </ol>
+
+        <div class="step-single">
+     
+            <img
+              src="images/12_Sec62_step1.png"
+              alt="Set of papers exploration view with multiple selected papers"
+            />
+            <p class="step-caption">Set of papers exploration.</p>
+
+        </div>
+      </section>
+
+      <!-- 6.3 Topic-Level Exploration -->
+      <section id="topic-level">
+        <h3>6.3 Topic-Level Exploration</h3>
+        <p>
+          Topic-level exploration leverages the constructed <strong>Problems</strong> and <strong>Methods</strong> taxonomies.
+          AgenticScholar provides three typical topic-level query types:
+        </p>
+
+        <!-- 6.3.1 Research Trend Analysis -->
+        <div class="feature-block">
+          <h4>6.3.1 Research Trend Analysis</h4>
+          <p>
+            Visualize how a research area evolves over time:
+          </p>
+          <ol>
+            <li>In the taxonomy tree (<strong>Problems</strong> or <strong>Methods</strong>), select one or more target topics.</li>
+            <li>Open the <strong>Suggested queries</strong> and go to <em>Topic Level Exploration</em>.</li>
+            <li>Choose the query option for <strong>Research Trend Analysis</strong>.</li>
+            <li>The system generates a trend analysis and presents the result in the Center Canvas.</li>
+          </ol>
+
+          <div class="step-single">
+
+              <img
+                src="images/13_Sec631_step1.png"
+                alt="Topic-level exploration menu with research trend analysis option"
+              />
+              <p class="step-caption">Select your topics for <strong>research trend analysis</strong>.</p>
+            </div>
+
+            <div class="step-single">
+              <img
+                src="images/14_Sec631_step2.png"
+                alt="Line chart showing paper counts over time for selected topics"
+              />
+              <p class="step-caption">View the resulting trend chart.</p>
+
+          </div>
+        </div>
+
+        <!-- 6.3.2 Identify Milestone Papers -->
+        <div class="feature-block">
+          <h4>6.3.2 Identify Milestone Papers</h4>
+          <p>
+            Identify the most influential or representative papers for a given topic:
+          </p>
+          <ol>
+            <li>In the <strong>Problems</strong> or <strong>Methods</strong> taxonomy, select the target topic(s).</li>
+            <li>Open the <strong>Suggested queries</strong> and navigate to <em>Topic Level Exploration</em>.</li>
+            <li>Choose the query option for <strong>Milestone Paper Identification</strong>.</li>
+            <li>The system returns a ranked list of milestone papers.</li>
+          </ol>
+
+          <div class="step-single">
+     
+              <img
+                src="images/15_Sec632_step1.png"
+                alt="Topic-level query menu highlighting milestone paper identification"
+              />
+              <p class="step-caption">Select your topics for <strong>milestone paper</strong>.</p>
+        </div>
+
+            <div class="step-single">
+              <img
+                src="images/16_Sec632_step2.png"
+                alt="Ranked list of milestone papers under the trend chart"
+              />
+              <p class="step-caption">View the ranked list of milestone papers.</p>
+            </div>
+
+        </div>
+
+        <!-- 6.3.3 Discover New Research Ideas -->
+        <div class="feature-block">
+          <h4>6.3.3 Discover New Research Ideas</h4>
+          <p>
+            Uncover gaps in the literature and generate potential research directions:
+          </p>
+          <ol>
+            <li>In the taxonomy, select the topic(s) of interest.</li>
+            <li>Open the <strong>Suggested queries</strong> and select <em>Topic Level Exploration</em>.</li>
+            <li>Choose the query option for <strong>Discover New Research Ideas</strong>.</li>
+            <li>The system generates a research proposal with new research ideas for you to consider.</li>
+          </ol>
+
+          <div class="step-single">
+              <img
+                src="images/17_Sec633_step1.png"
+                alt="Topic-level exploration menu highlighting propose novel research ideas"
+              />
+              <p class="step-caption">Select your topics for <strong>propose novel research ideas</strong>.</p>
+          </div>
+
+            <div class="step-single">
+              <img
+                src="images/18_Sec633_step2.png"
+                alt="Generated research proposal text in the chat view"
+              />
+              <p class="step-caption">View the research proposal.</p>
+            </div>
+        </div>
+
+      </section>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AgenticScholar Project. <br>
+    <a href="http://uqdatasystem-ab9d83bf.uqcloud.net/">Access the System</a></p>
+  </footer>
+
+</body>
+</html>

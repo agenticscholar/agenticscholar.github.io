@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgenticScholar | Project Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+      <img src="logo_agentic.png" alt="AgenticScholar Logo" class="logo-img">
+      AgenticScholar
+    </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Overview</a>
+        <a href="video.html">Video</a>
+        <a href="slides.html">Slides</a>
+        <a href="poster.html">Poster</a>
+        <a href="guide.html">User Guide</a>
+        
+        <div class="nav-item has-dropdown">
+          <a class="dropdown-toggle">Examples ▾</a>
+          <div class="dropdown-menu">
+            <a href="vector_search_example.html">Vector search</a>
+            <a href="learned_qo_example.html">Learned query optimization</a>
+            <a href="llm_tabular_example.html">LLMs for tabular data analysis</a>
+          </div>
+        </div>
+
+        <a href="http://uqdatasystem-ab9d83bf.uqcloud.net/" target="_blank" style="color: var(--accent-color);">Try System ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>AgenticScholar: Agentic Data Management for Scholarly Corpora</h1>
+      <p class="subtitle">An agentic system for multi-step reasoning, synthesis, and knowledge generation over large-scale scholarly data.</p>
+      
+      <!-- <div style="margin-top: 2rem;">
+        <a href="http://uqdatasystem-ab9d83bf.uqcloud.net/" class="btn-primary" target="_blank">Launch Live System</a>
+      </div> -->
+    </section>
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        AgenticScholar is an agentic scholarly data management system that manages and performs multi-step reasoning over large-scale scholarly corpora. It supports users in addressing open-ended and complex scholarly queries, going beyond simple retrieval to deep understanding, synthesis, and knowledge generation.
+      </p>
+    </section>
+
+    <section id="queries">
+      <h2>Which Queries Do We Support?</h2>
+      <p>
+       Our system supports scholarly analysis through three progressively more challenging query type. It first enables paper retrieval to gather relevant works. Building on this, it performs information extraction and synthesis, from single-paper understanding to multi-paper comparison and synthesis. At the highest level, it achieves knowledge discovery and generation, identifying milestone papers, trends, and research opportunities.
+
+      </p>
+
+      <!-- <div class="features-grid">
+        <div class="feature-card">
+          <h3>1. Paper Retrieval Queries</h3>
+          <p>Enables foundational paper retrieval to gather relevant works based on metadata or semantic constraints (e.g., finding vector search papers since 2023).</p>
+        </div>
+        <div class="feature-card">
+          <h3>2. Information Extraction & Synthesis</h3>
+          <p>Performs single-paper understanding (extracting experimental settings) and multi-paper comparison (synthesizing common pros/cons or inconsistencies across methods).</p>
+        </div>
+        <div class="feature-card">
+          <h3>3. Knowledge Discovery & Generation</h3>
+          <p>Achieves high-level reasoning by identifying milestone papers, analyzing research trends, and exploring under-explored research opportunities.</p>
+        </div> -->
+      </div>
+
+      <div style="margin-top: 2rem; text-align: center;">
+        <img src="query.png" alt="Three tiers of scholarly queries supported by AgenticScholar" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p class="note" style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Figure 1: The three tiers of queries supported by AgenticScholar.</p>
+      </div>
+    </section>
+
+    <section id="architecture">
+      <h2>System Architecture</h2>
+      <p>
+        To address these queries, we build an agentic scholarly data management system that autonomously interprets user intents, plans complex analytical pipelines, and executes them end-to-end within the rich semantic context of a scholarly ecosystem.
+      </p>
+      
+      <div style="margin-top: 2rem; text-align: center;">
+        <img src="arch.png" alt="AgenticScholar System Architecture and Performance Goals" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p class="note" style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Figure 2: The architecture of AgenticScholar, featuring Knowledge Representation, Hybrid Planning, and Unified Execution layers.</p>
+      </div>
+
+      <!-- <h3>Key Layers</h3>
+      <ul>
+        <li><strong>Knowledge Representation Layer:</strong> Transforms documents into a structure-aware knowledge graph with hierarchical taxonomies.</li>
+        <li><strong>LLM-Centric Hybrid Planning Layer:</strong> Utilizes predefined plans for efficiency and a dynamic plan generator for open-ended queries.</li>
+        <li><strong>Unified Execution Layer:</strong> Orchestrates a parallel execution engine with a library of composable operators (e.g., Search, Extract, Rank, MatrixConstruct).</li>
+      </ul> -->
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AgenticScholar Project. <br>
+    <a href="http://uqdatasystem-ab9d83bf.uqcloud.net/">Access the System</a></p>
+  </footer>
+
+</body>
+</html>
